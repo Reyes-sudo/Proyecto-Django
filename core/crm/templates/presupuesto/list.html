@@ -1,0 +1,56 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+<script src="{% static 'presupuesto/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columnas %}
+<tr>
+    <th scope="col" style="width: 5%;">#</th>
+    <th scope="col" style="width: 10%;">Servicio</th>
+    <th scope="col" style="width: 10%;">Fecha servicio</th>
+    <th scope="col" style="width: 10%;">Fecha caducidad servicio</th>
+    <th scope="col" style="width: 10%;">Monto descuento servicio</th>
+    <th scope="col" style="width: 10%;">Con igv</th>
+    <th scope="col" style="width: 10%;">Subtotal servicio</th>
+    <th scope="col" style="width: 10%;">Total impuesto servicio</th>
+    <th scope="col" style="width: 10%;">Total servicio</th>
+    <th scope="col" style="width: 10%;">Estado servicio</th>
+    <th scope="col" style="width: 10%;">Nota administrador</th>
+    <th scope="col" style="width: 10%;">Nota cliente</th>
+    <th scope="col" style="width: 10%;">Terminos y condiciones</th>
+    <th scope="col" style="width: 10%;">Monto de descuento oficial</th>
+    <th scope="col" style="width: 10%;">Sede</th>
+</tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block js %}
+{% comment %} Modal {% endcomment %}
+<div
+  class="modal fade"
+  id="modal-img"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <b class="b-modal-title"
+            ><i class="far fa-image"></i> Imagen usuario</b
+          >
+        </h5>
+          
+      </div>
+      <div class="modal-body d-flex flex-column align-items-center my-2">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
