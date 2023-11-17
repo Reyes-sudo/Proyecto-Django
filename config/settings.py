@@ -15,7 +15,8 @@ import os
 from config.db import *
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+from dotenv import load_dotenv
+load_dotenv ()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -87,7 +88,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 # DATABASES = MYSQL
-DATABASES = SQLITE
+DATABASES = {
+  'default': {
+    'ENGINE':"django.db.backends.postgresql_psycopg2",
+    'NAME':"proyecto_django",
+    'USER':"jose",
+    'PASSWORD':"6EZ5zGaa9dknqTI3Wjnz9kGVzfGiU87a",
+    'HOST':"dpg-clbdvb2qviqc73cnn3vg-a.oregon-postgres.render.com",
+    'PORT':5432
+  }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
